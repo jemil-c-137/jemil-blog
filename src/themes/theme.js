@@ -11,10 +11,10 @@ const baseTheme = {
     secondary: "Inter, sans-serif",
   },
   colors: {
-    dark: colors.dark,
-    light: colors.light,
-    blue: colors.blue,
-    orange: colors.orange,
+    dark: "#21243d",
+    light: "#fff",
+    blue: "#00A8CC",
+    orange: "#ff7C7C",
   },
 
   breakpoints: {

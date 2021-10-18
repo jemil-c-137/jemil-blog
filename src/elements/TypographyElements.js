@@ -1,4 +1,6 @@
 import styled from "styled-components"
+import { space } from "styled-system"
+
 
 export const HeroHeading = styled.h1`
   font-size: 2rem;
@@ -17,6 +19,7 @@ export const HeroHeading = styled.h1`
 `
 
 export const H1 = styled.h1`
+  display: inline;
   font-size: 1.875rem;
   line-height: 2.5rem;
   font-weight: 700;
@@ -49,6 +52,8 @@ export const H2 = styled.h2`
 
 `
 export const Description = styled.p`
+  ${space}
+
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 400;

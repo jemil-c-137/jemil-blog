@@ -21,7 +21,7 @@ export const Nav = styled.nav`
 
 
   ul {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   li:not(:last-child) {
@@ -43,9 +43,9 @@ export const Burger = styled.button`
 
   div {
     width: 1.5rem;
-    height: 0.33rem;
+    height: 0.1rem;
     background: ${props => props.theme.global.color};
-    border-radius: 5px;
+    border-radius: 1px;
     transform-origin: 1px;
   }
 `

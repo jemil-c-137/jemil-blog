@@ -1,6 +1,9 @@
 module.exports = {
   plugins: [
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-styled-components-dark-mode`,
       options: {
@@ -11,7 +14,9 @@ module.exports = {
           },
           colors: {
             blue: "#00A8CC",
-            teal: "#FF7C7C",
+            orange: "#FF7C7C",
+            light: "#fff",
+            dark: "#21243d"
           },
           global: {
             color: "#21243d",

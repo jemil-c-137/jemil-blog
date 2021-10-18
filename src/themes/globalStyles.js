@@ -20,6 +20,7 @@ export const GlobalStyles = createGlobalStyle`
   a {
     color: ${props => props.theme.global.color};
     text-decoration: none;
+    transition: all .3s ease;
   }
   a:hover {
     color: orange;
@@ -27,5 +28,11 @@ export const GlobalStyles = createGlobalStyle`
 
   ul {
     list-style-type: none;
+  }
+
+  button {
+    border: none;
+    background: none;
+    font-family: ${props => props.theme.fonts.secondary};
   }
 `
