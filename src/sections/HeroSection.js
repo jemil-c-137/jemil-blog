@@ -9,10 +9,14 @@ const StyledSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 1rem;
 
+  
   @media ${props => props.theme.breakpoints.tablet} {
     flex-direction: row;
     justify-content: space-evenly;
+    padding: 0 2.5rem;
+
   }
 `
 

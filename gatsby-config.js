@@ -16,11 +16,13 @@ module.exports = {
             blue: "#00A8CC",
             orange: "#FF7C7C",
             light: "#fff",
-            dark: "#21243d"
+            dark: "#21243d",
+            lightPurple: "#df73ff",
           },
           global: {
             color: "#21243d",
             bg: "#fff",
+            additional: "#EDF7FA"
           },
 
           breakpoints: {
@@ -37,10 +39,12 @@ module.exports = {
           colors: {
             blue: "#00A8CC",
             teal: "#FF7C7C",
+            lightPurple: "#df73ff",
           },
           global: {
             color: "#fff",
             bg: "#21234d",
+            additional: "#C9a0ff"
           },
           breakpoints: {
             mobile: "only screen and (min-width: 320px)",

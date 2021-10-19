@@ -5,6 +5,7 @@ import { GlobalStyles } from "../themes/globalStyles"
 import { Container, Header, H1 } from "../elements"
 import { Link } from "gatsby"
 import useWindowSize from "../utils/hooks/useWindowSize"
+import { StaticImage } from "gatsby-plugin-image"
 
 export const Layout = ({ children }) => {
   const theme = useContext(ThemeContext)
@@ -30,10 +31,18 @@ export const Layout = ({ children }) => {
       <GlobalStyles theme={theme} />
       <Container>
         <Header>
-          <Link to={"/"}>
-            <H1>Jemil S.</H1>
-          </Link>
-          {width <=768 ? (<BurgerMenu show={showBurger} toggleShow={toggleShow} />) : (<Navbar />)}
+            <StaticImage
+              src={"../images/logo.png"}
+              alt=""
+              layout="fixed"
+              width={100}
+              height={100}
+            />
+          {width <= 768 ? (
+            <BurgerMenu show={showBurger} toggleShow={toggleShow} />
+          ) : (
+            <Navbar />
+          )}
         </Header>
         {children}
       </Container>
