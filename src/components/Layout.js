@@ -32,11 +32,12 @@ export const Layout = ({ children }) => {
       <Container>
         <Header>
             <StaticImage
-              src={"../images/logo.png"}
+              src={"../images/lg.png"}
               alt=""
               layout="fixed"
               width={100}
               height={100}
+              imgStyle={{borderRadius: "50%"}}
             />
           {width <= 768 ? (
             <BurgerMenu show={showBurger} toggleShow={toggleShow} />
