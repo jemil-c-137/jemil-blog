@@ -26,15 +26,15 @@ export const Layout = ({ children }) => {
         position: "relative",
       }}
     >
-      <ThemeSwitcher />
+      {/* <ThemeSwitcher /> */}
       <GlobalStyles theme={theme} />
       <Container>
-        <Header>
+        {/*        <Header>
           <Link to={"/"}>
             <H1>Jemil S.</H1>
           </Link>
           {width <=768 ? (<BurgerMenu show={showBurger} toggleShow={toggleShow} />) : (<Navbar />)}
-        </Header>
+        </Header> */}
         {children}
       </Container>
     </main>

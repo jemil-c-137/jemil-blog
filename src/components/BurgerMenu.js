@@ -15,7 +15,9 @@ export const BurgerMenu = ({ show, toggleShow, children }) => {
           {navigationLinks.map(link => {
             return (
               <li>
-                <Link onClick={toggleShow} to={link.to}>{link.title}</Link>
+                <Link onClick={toggleShow} to={link.to}>
+                  {link.title}
+                </Link>
               </li>
             )
           })}

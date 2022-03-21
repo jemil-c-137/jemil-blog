@@ -10,15 +10,15 @@ export const GlobalStyles = createGlobalStyle`
 
 
   body {
-    background-color: ${props => props.theme.global.bg};
-    color: ${props => props.theme.global.color};
+    background-color: ${props => props.theme.global.color};
+    color: ${props => props.theme.global.bg};
     font-family: ${props => props.theme.fonts.main};
     
     transition: background 0.2s ease-out;
   }
   
   a {
-    color: ${props => props.theme.global.color};
+    color: ${props => props.theme.global.bg};
     text-decoration: none;
     transition: all .3s ease;
   }
@@ -34,5 +34,6 @@ export const GlobalStyles = createGlobalStyle`
     border: none;
     background: none;
     font-family: ${props => props.theme.fonts.secondary};
+    color: ${props => props.theme.global.color};
   }
 `
