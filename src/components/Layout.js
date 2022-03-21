@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react"
-import { BurgerMenu, ThemeSwitcher, Navbar } from "./"
+import { BurgerMenu, Navbar } from "./"
 import { ThemeContext } from "styled-components"
 import { GlobalStyles } from "../themes/globalStyles"
 import { Container, Header, H1 } from "../elements"
@@ -26,7 +26,6 @@ export const Layout = ({ children }) => {
         position: "relative",
       }}
     >
-      {/* <ThemeSwitcher /> */}
       <GlobalStyles theme={theme} />
       <Container>
         {/*        <Header>

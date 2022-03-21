@@ -8,6 +8,9 @@ import ContactMe from "../sections/ContactMe"
 export const query = graphql`
   query MyQuery {
     datoCmsHomepage {
+      avatar {
+        gatsbyImageData(width: 200, height: 200, placeholder: BLURRED)
+      }
       heading
       subheading
       projectsTitle
@@ -33,13 +36,19 @@ export const query = graphql`
 
 export default function Home({ data }) {
   const { datoCmsHomepage } = data
-  console.log(datoCmsHomepage)
-  const { heading, subheading, projects, projectsTitle, skills, skillsTitle } =
-    datoCmsHomepage
+  const {
+    heading,
+    subheading,
+    projects,
+    projectsTitle,
+    skills,
+    skillsTitle,
+    avatar,
+  } = datoCmsHomepage
 
   return (
     <main>
-      <HeroSection />
+      <HeroSection avatar={avatar} heading={heading} subheading={subheading} />
       <Projects projects={projects} title={projectsTitle} />
       <Skills title={skillsTitle} skills={skills} />
       <ContactMe />

@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Description, HeroHeading, Button, Flex } from "../elements"
 import styled from "styled-components"
 import * as css from "./sections.module.css"
@@ -40,21 +40,21 @@ const FlexSpan = styled.span`
   column-gap: 10px;
 `
 
-export const HeroSection = () => {
+export const HeroSection = ({ avatar, heading, subheading }) => {
   const { width } = useWindowSize()
+
+  const image = getImage(avatar)
 
   return (
     <StyledSection>
       <TextWrapper>
         <HeroHeading className={css.title}>
-          <p>Hello, I'm Jemil 👋</p>
+          <p>{heading}</p>
         </HeroHeading>
         <Description mt={4} mb={3}>
-          I am a Frontend Developer experienced in building marketing websites
-          with JAMStack technology (Gatsby, Next, Netlify, DATOCms) and building
-          Web Applications with React, Redux, TypeScript, GraphQL, MongoDB.
+          {subheading}
         </Description>
-        <Flex $colGap="1rem">
+        <Flex $colGap="2rem">
           <Button>
             <a
               style={{ color: "inherit" }}
@@ -84,15 +84,10 @@ export const HeroSection = () => {
         </Flex>
       </TextWrapper>
       <ImageWrapper>
-        <StaticImage
-          src="../images/me.jpg"
-          alt="A nice and humble guy, i.e. me"
-          placeholder="blurred"
-          layout="fixed"
-          width={200}
-          height={200}
-          imgClassName={css.image}
-          quality={100}
+        <GatsbyImage
+          style={{ borderRadius: "50%" }}
+          image={image}
+          alt="picture of nice and hub,le guy"
         />
       </ImageWrapper>
     </StyledSection>

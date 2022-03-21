@@ -24,20 +24,3 @@ const baseTheme = {
   },
 }
 
-export const darkTheme = {
-  ...baseTheme,
-  global: {
-    color: colors.light,
-    bg: colors.dark,
-  },
-}
-
-
-export const lightTheme = {
-  ...baseTheme,
-  global: {
-    color: colors.dark,
-    bg: colors.light,
-  },
-}
-

@@ -105,7 +105,6 @@ const Skills = ({ title = "Skills", skills }) => {
 
   const columns = splitInChunks(skills, 4)
 
-  console.log(columns)
 
   return (
     <Section>
